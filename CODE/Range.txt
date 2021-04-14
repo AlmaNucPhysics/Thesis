@@ -1,0 +1,90 @@
+############################
+###Geometry of the World####
+############################
+d:Ge/World/HLX=3. m
+d:Ge/World/HLY=3. m
+d:Ge/World/HLZ=3. m
+d:Ge/World/TransX=0. m
+d:Ge/World/TransY=0. m
+d:Ge/World/TransZ=0. m
+s:Ge/World/Material="Vacuum"
+b:Ge/World/Invisible="True"
+
+#################################
+###Geometry of the Detector######
+#################################
+s:Ge/AirCube/Type="TsBox"
+s:Ge/AirCube/Parent="World"
+s:Ge/AirCube/Material="G4_AIR"
+d:Ge/AirCube/HLX=2. m
+d:Ge/AirCube/HLY=2. m
+d:Ge/AirCube/HLZ=2. m
+d:Ge/AirCube/TransX=0. m
+d:Ge/AirCube/TransY=0. m
+d:Ge/AirCube/TransZ=0. m
+#ic:Ge/AirCube/XBins=100
+ic:Ge/AirCube/YBins=100
+ic:Ge/AirCube/ZBins=100
+
+#################################
+########### Physics##############
+#################################
+sv:Ph/Default/Modules = 1 "g4em-standard_opt4"
+
+#################################
+##############Source#############
+#################################
+s:So/MySource/Type="Beam"
+s:So/BeamPosition/Parent="World"
+s:Ge/BeamPosition/Type="Group"
+d:Ge/BeamPosition/TransX=0. mm
+d:Ge/BeamPosition/TransY=0. mm
+d:Ge/BeamPosition/TransZTmp=-1 * Ge/AirCube/HLZ m
+d:Ge/BeamPosition/TransZ=Ge/BeamPosition/TransZTmp - 2 m
+d:Ge/BeamPosition/RotX=0. deg
+d:Ge/BeamPosition/RotY=0. deg
+d:Ge/BeamPosition/RotZ=0. deg
+
+s:So/MySource/Component="BeamPosition"
+s:So/MySource/BeamParticle="Proton"
+d:So/MySource/BeamEnergy=18. MeV
+u:So/MySource/BeamEnergySpread= 0.7778 
+s:So/MySource/BeamPositionDistribution = "Gaussian"
+s:So/MySource/BeamPositionCutoffShape = "Ellipse" 
+d:So/MySource/BeamPositionCutoffX = 12 mm
+d:So/MySource/BeamPositionCutoffY = 20 mm
+d:So/MySource/BeamPositionSpreadX = 2 mm
+d:So/MySource/BeamPositionSpreadY = 2 mm
+s:So/MySource/BeamAngularDistribution  = "None"
+
+i:So/MySource/NumberOfHistoriesInRun = 5000
+
+#################################
+#############Scoring#############
+#################################
+s:Sc/Range/Quantity                  = "EnergyDeposit"
+s:Sc/Range/Component                 = "AirCube"
+b:Sc/Range/OutputToConsole           = "TRUE"
+s:Sc/Range/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/Range/OutputType                = "csv"
+#ic:Sc/Range/ZBins                     = 100
+#i:Sc/Range/HistogramBins             = 1000
+#d:Sc/Range/HistogramMin              = 0. MeV
+#d:Sc/Range/HistogramMax              = 18. MeV
+
+#################################
+#############View################
+#################################
+s:Gr/ViewA/Type= "OpenGL"
+i:Gr/ViewA/WindowSizeX=900
+i:Gr/ViewA/WindowSizeY=900
+d:Gr/ViewA/Theta=55 deg
+d:Gr/ViewA/Phi=20 deg
+s:Gr/ViewA/Projection="Perspective"
+d:Gr/ViewA/PerspectiveAngle=30 deg
+s:Gr/ViewA/FileName="topas"
+b:Gr/ViewA/IncludeGeometry="True"
+b:Gr/ViewA/IncludeTrajectories="True"
+b:Gr/ViewA/IncludeStepPoints="True"
+
+b:Ts/PauseBeforeQuit = "True"

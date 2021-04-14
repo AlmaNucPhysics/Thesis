@@ -1,0 +1,245 @@
+
+############################
+##Geometry of the World#####
+############################
+d:Ge/World/HLX=4. m
+d:Ge/World/HLY=4. m
+d:Ge/World/HLZ=4. m
+d:Ge/World/TransX=0. m
+d:Ge/World/TransY=0. m
+d:Ge/World/TransZ=0. m
+s:Ge/World/Material="G4_AIR"
+b:Ge/World/Invisible="True"
+
+#Detector 2
+#################################
+###Geometry of the Detector######
+#################################
+s:Ge/Layer1Det2/Type="TsBox"
+s:Ge/Layer1Det2/Parent="World"
+s:Ge/Layer1Det2/Material="Ni2SiDet2"
+sv:Ma/Ni2SiDet2/Components=2 "Nickel" "Silicon"
+uv:Ma/Ni2SiDet2/Fractions=2 0.66 0.34
+d:Ma/Ni2SiDet2/Density=7.4 g/cm3
+d:Ge/Layer1Det2/HLX=4.75 mm
+d:Ge/Layer1Det2/HLY=4.75 mm
+d:Ge/Layer1Det2/HLZ=0.00005 mm
+d:Ge/Layer1Det2/TransX=0. mm
+d:Ge/Layer1Det2/TransY=0. mm
+d:Ge/Layer1Det2/TransZ=Ge/World/TransZ mm
+d:Ge/Layer1Det2/RotX=0. deg
+d:Ge/Layer1Det2/RotY=0. deg
+d:Ge/Layer1Det2/RotZ=0. deg
+ic:Ge/Layer1Det2/XBins=10
+ic:Ge/Layer1Det2/YBins=10
+#ic:Ge/Layer1Det2/ZBins=10
+s:Ge/Layer1Det2/Color="white"
+
+s:Ge/Layer2Det2/Type="TsBox"
+s:Ge/Layer2Det2/Parent="World"
+s:Ge/Layer2Det2/Material="Epi_pDet2"
+sv:Ma/Epi_pDet2/Components=2 "Silicon" "Carbon"
+uv:Ma/Epi_pDEt2/Fractions=2 0.5 0.5
+d:Ma/Epi_pDet2/Density=3.23 g/cm3
+d:Ge/Layer2Det2/HLX=4.75 mm
+d:Ge/Layer2Det2/HLY=4.75 mm
+d:Ge/Layer2Det2/HLZ=0.0001 mm
+d:Ge/Layer2Det2/TransX=0. mm
+d:Ge/Layer2Det2/TransY=0. mm
+d:Ge/Layer2Det2/TransZTmp=Ge/Layer1DEt2/TransZ - Ge/Layer1DEt2/HLZ mm
+d:Ge/Layer2Det2/TransZ=Ge/Layer2Det2/TransZTmp - Ge/Layer2Det2/HLZ mm
+d:Ge/Layer2Det2/RotX=0. deg
+d:Ge/Layer2Det2/RotY=0. deg
+d:Ge/Layer2Det2/RotZ=0. deg
+#ic:Ge/Layer2Det2/XBins=100
+ic:Ge/Layer2Det2/YBins=100
+ic:Ge/Layer2Det2/ZBins=100
+s:Ge/Layer2Det2/Color="Red"
+s:Ge/Layer2DEt2/DrawingStyle="Solid"
+
+s:Ge/Layer3Det2/Type="TsBox"
+s:Ge/Layer3Det2/Parent="World"
+s:Ge/Layer3Det2/Material="Epi_nDet2"
+sv:Ma/Epi_nDet2/Components=2 "Silicon" "Carbon"
+uv:Ma/Epi_nDet2/Fractions=2 0.5 0.5
+d:Ma/Epi_nDet2/Density=3.23 g/cm3
+d:Ge/Layer3Det2/HLX=4.95 mm
+d:Ge/Layer3Det2/HLY=4.95 mm
+d:Ge/Layer3Det2/HLZ=0.005 mm
+d:Ge/Layer3Det2/TransX=0. mm
+d:Ge/Layer3Det2/TransY=0. mm
+d:Ge/Layer3Det2/TransZTmp=Ge/Layer2Det2/TransZ - Ge/Layer2Det2/HLZ mm
+d:Ge/Layer3Det2/TransZ=Ge/Layer3Det2/TransZTmp - Ge/Layer3Det2/HLZ mm
+d:Ge/Layer3Det2/RotX=0. deg
+d:Ge/Layer3Det2/RotY=0. deg
+d:Ge/Layer3Det2/RotZ=0. deg
+#ic:Ge/Layer3Det2/XBins=100
+ic:Ge/Layer3Det2/YBins=100
+ic:Ge/Layer3Det2/ZBins=100
+s:Ge/Layer3Det2/Color="Yellow"
+s:Ge/Layer3DEt2/DrawingStyle="Solid"
+
+s:Ge/Layer4Det2/Type="TsBox"
+s:Ge/Layer4Det2/Parent="World"
+s:Ge/Layer4Det2/Material="SubstratoDet2"
+sv:Ma/SubstratoDet2/Components=2 "Silicon" "Carbon"
+uv:Ma/SubstratoDet2/Fractions=2 0.5 0.5
+d:Ma/SubstratoDet2/Density=3.23 g/cm3
+d:Ge/Layer4Det2/HLX=5. mm
+d:Ge/Layer4Det2/HLY=5. mm
+d:Ge/Layer4Det2/HLZ=0.175 mm
+d:Ge/Layer4Det2/TransX=0. mm
+d:Ge/Layer4Det2/TransY=0. mm
+d:Ge/Layer4Det2/TransZTmp=Ge/Layer3DEt2/TransZ - Ge/Layer3DEt2/HLZ mm
+d:Ge/Layer4Det2/TransZ=Ge/Layer4DEt2/TransZTmp - Ge/Layer4DEt2/HLZ mm
+d:Ge/Layer4Det2/RotX=0. deg
+d:Ge/Layer4Det2/RotY=0. deg
+d:Ge/Layer4Det2/RotZ=0. deg
+#ic:Ge/Layer4Det2/XBins=100
+ic:Ge/Layer4Det2/YBins=100
+ic:Ge/Layer4Det2/ZBins=100
+s:Ge/Layer4Det2/Color="Navy"
+s:Ge/Layer4DEt2/DrawingStyle="Solid"
+
+s:Ge/Layer5Det2/Type="TsBox"
+s:Ge/Layer5Det2/Parent="World"
+s:Ge/Layer5Det2/Material="G4_Al"
+d:Ge/Layer5Det2/HLX=5. mm
+d:Ge/Layer5Det2/HLY=5. mm
+d:Ge/Layer5Det2/HLZ=0.00005 mm
+d:Ge/Layer5Det2/TransX=0. mm
+d:Ge/Layer5Det2/TransY=0. mm
+d:Ge/Layer5Det2/TransZTmp=Ge/Layer4DEt2/TransZ - Ge/Layer4DEt2/HLZ mm
+d:Ge/Layer5Det2/TransZ=Ge/Layer5Det2/TransZTmp - Ge/Layer5Det2/HLZ mm
+d:Ge/Layer5Det2/RotX=0. deg
+d:Ge/Layer5Det2/RotY=0. deg
+d:Ge/Layer5Det2/RotZ=0. deg
+#ic:Ge/Layer5Det2/XBins=100
+ic:Ge/Layer5Det2/YBins=100
+ic:Ge/Layer5Det2/ZBins=100
+s:Ge/Layer5Det2/Color="Silver"
+s:Ge/Layer5DEt2/DrawingStyle="Solid"
+
+s:Ge/TopDet2/Type="TsBox"
+s:Ge/TopDet2/Parent="World"
+s:Ge/TopDet2/Material="Copper"
+d:Ge/TopDet2/HLX=5. mm
+d:Ge/TopDet2/HLY=5. mm
+d:Ge/TopDet2/HLZ=0.026667 mm
+d:Ge/TopDet2/TransX=0. mm
+d:Ge/TopDet2/TransY=0. mm
+d:Ge/TopDet2/TransZTmp=Ge/Layer5Det2/TransZ - Ge/Layer5Det2/HLZ mm
+d:Ge/TopDet2/TransZ=Ge/TopDet2/TransZTmp - Ge/TopDet2/HLZ mm
+d:Ge/TopDet2/RotX=0. deg
+d:Ge/TopDet2/RotY=0. deg
+d:Ge/TopDet2/RotZ=0. deg
+#ic:Ge/TopDet2/XBins=100
+ic:Ge/TopDet2/YBins=100
+ic:Ge/TopDet2/ZBins=100
+s:Ge/TopDet2/Color="grass"
+s:Ge/TopDet2/DrawingStyle="Solid"
+
+s:Ge/MiddleDet2/Type="TsBox"
+s:Ge/MiddleDet2/Parent="World"
+s:Ge/MiddleDet2/Material="FR4Det2"
+sv:Ma/FR4Det2/Components=6 "Oxygen" "Carbon" "Hydrogen" "Silicon" "Sodium" "Boron"
+uv:Ma/FR4Det2/Fractions=6 0.3888 0.20284 0.20284 0.154224 0.022176 0.02912
+d:Ma/FR4Det2/Density=1.9 g/cm3
+d:Ge/MiddleDet2/HLX=5. mm
+d:Ge/MiddleDet2/HLY=5. mm
+d:Ge/MiddleDet2/HLZ=0.508 mm
+d:Ge/MiddleDet2/TransX=0. mm
+d:Ge/MiddleDet2/TransY=0. mm
+d:Ge/MiddleDet2/TransZTmp=Ge/TopDet2/TransZ - Ge/TopDet2/HLZ mm
+d:Ge/MiddleDet2/TransZ=Ge/MiddleDet2/TransZTmp - Ge/MiddleDet2/HLZ mm
+d:Ge/MiddleDet2/RotX=0. deg
+d:Ge/MiddleDet2/RotY=0. deg
+d:Ge/MiddleDet2/RotZ=0. deg
+#ic:Ge/MiddleDet2/XBins=100
+ic:Ge/MiddleDet2/YBins=100
+ic:Ge/MiddleDet2/ZBins=100
+s:Ge/MiddleDet2/Color="Silver"
+s:Ge/MiddleDet2/DrawingStyle="Solid"
+
+s:Ge/BottomDet2/Type="TsBox"
+s:Ge/BottomDet2/Parent="World"
+s:Ge/BottomDet2/Material="Copper"
+d:Ge/BottomDet2/HLX=5. mm
+d:Ge/BottomDet2/HLY=5. mm
+d:Ge/BottomDet2/HLZ=0.026667 mm
+d:Ge/BottomDet2/TransX=0. mm
+d:Ge/BottomDet2/TransY=0. mm
+d:Ge/BottomDet2/TransZTmp=Ge/MiddleDet2/TransZ - Ge/MiddleDet2/HLZ mm
+d:Ge/BottomDet2/TransZ=Ge/BottomDet2/TransZTmp - Ge/BottomDet2/HLZ mm
+d:Ge/BottomDet2/RotX=0. deg
+d:Ge/BottomDet2/RotY=0. deg
+d:Ge/BottomDet2/RotZ=0. deg
+#ic:Ge/BottomDet2/XBins=100
+ic:Ge/BottomDet2/YBins=100
+ic:Ge/BottomDet2/ZBins=100
+s:Ge/BottomDet2/Color="grass"
+s:Ge/BottomDet2/DrawingStyle="Solid"
+
+#################################
+########### Physics##############
+#################################
+sv:Ph/Default/Modules = 1 "g4em-standard_opt4"
+
+#################################
+##############Source#############
+#################################
+s:So/MySource/Type="Beam"
+s:So/BeamPosition/Parent="World"
+s:Ge/BeamPosition/Type="Group"
+d:Ge/BeamPosition/TransX=0. mm
+d:Ge/BeamPosition/TransY=0. mm
+d:Ge/BeamPosition/TransZ=Ge/Layer1Det1/TransZ + Ge/Layer1Det1/HLZ m
+d:Ge/BeamPosition/RotX=180. deg
+d:Ge/BeamPosition/RotY=0. deg
+d:Ge/BeamPosition/RotZ=0. deg
+
+s:So/MySource/Component="BeamPosition"
+s:So/MySource/BeamParticle="Proton"
+d:So/MySource/BeamEnergy=18. MeV
+u:So/MySource/BeamEnergySpread= 0.7778 
+s:So/MySource/BeamPositionDistribution = "Gaussian"
+s:So/MySource/BeamPositionCutoffShape = "Ellipse" 
+d:So/MySource/BeamPositionCutoffX = 12 mm
+d:So/MySource/BeamPositionCutoffY = 20 mm
+d:So/MySource/BeamPositionSpreadX = 2 mm
+d:So/MySource/BeamPositionSpreadY = 2 mm
+s:So/MySource/BeamAngularDistribution  = "None"
+
+i:So/MySource/NumberOfHistoriesInRun = 1000
+
+#################################
+#############Scoring#############
+#################################
+s:Sc/EnergyDepositedInLayer3Det2/Quantity                  = "EnergyDeposit"
+s:Sc/EnergyDepositedInLayer3Det2/Component                 = "Layer3Det2"
+b:Sc/EnergyDepositedInLayer3Det2/OutputToConsole           = "0"
+s:Sc/EnergyDepositedInLayer3Det2/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/EnergyDepositedInLayer3Det2/OutputType                = "csv"
+
+#################################
+#############View################
+#################################
+s:Gr/ViewA/Type= "OpenGL"
+i:Gr/ViewA/WindowSizeX=900
+i:Gr/ViewA/WindowSizeY=900
+d:Gr/ViewA/Theta=55 deg
+d:Gr/ViewA/Phi=20 deg
+s:Gr/ViewA/Projection="Perspective"
+d:Gr/ViewA/PerspectiveAngle=30 deg
+s:Gr/ViewA/FileName="topas"
+b:Gr/ViewA/IncludeGeometry="True"
+b:Gr/ViewA/IncludeTrajectories="True"
+b:Gr/ViewA/IncludeStepPoints="True"
+b:Gr/ViewA/UseSmoothTrajectories="True"
+#s:Gr/ViewA/ColorByGenerationColors=2 "red" "green"
+#b:Gr/ViewA/IncludeAxes = "True" 
+#s:Gr/ViewA/AxesComponent = "World" 
+#d:Gr/ViewA/AxesSize=10 cm
+#b:Gr/ViewA/CopyOpenGLToPDF = "True" 
+
+b:Ts/PauseBeforeQuit = "True"
