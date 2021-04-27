@@ -1,0 +1,18 @@
+# TOPAS Version: 3.6.p1
+# Parameter File: Dets.txt
+# Results for scorer Energy_Water2
+# Scored in component: Water2
+# X in 1 bin  of 0.95 cm
+# Y in 1 bin  of 0.95 cm
+# Z in 10 bins of 0.0015 cm
+# EnergyDeposit ( MeV ) : Sum   
+0, 0, 0, 183.7690582275391
+0, 0, 1, 180.8756866455078
+0, 0, 2, 181.1240692138672
+0, 0, 3, 180.8220977783203
+0, 0, 4, 179.6723022460938
+0, 0, 5, 180.5235443115234
+0, 0, 6, 181.5613861083984
+0, 0, 7, 181.4727020263672
+0, 0, 8, 180.4136962890625
+0, 0, 9, 181.3189849853516
